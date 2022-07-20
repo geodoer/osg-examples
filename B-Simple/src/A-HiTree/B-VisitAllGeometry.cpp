@@ -86,13 +86,12 @@ public:
 			//TODO:加上你的处理
 			//...
 
-			auto newGeometry = as(*mesh);   //转成OSG的数据结构
-
 			//
 			//塞回去
 			//
 			//[方法] 直接设置
 			//问题：Node里可能有状态关联，直接设置，可能会出现问题
+			//auto newGeometry = as(*mesh);
 			//geode.setDrawable(i, newGeometry);
 			//[方法] 原地替换（建议）
 			as(*mesh, *geometry);
